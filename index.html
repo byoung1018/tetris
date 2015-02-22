@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Tetris</title>
+  </head>
+
+  <body>
+    <canvas></canvas>
+    <script type="application/javascript" src="lib/piece.js"></script>
+    <script type="application/javascript" src="lib/game.js"></script>
+    <script type="application/javascript" src="lib/gameView.js"></script>
+    <script type="application/javascript">
+      (function () {
+
+        var canvasEl = document.getElementsByTagName("canvas")[0];
+        canvasEl.width = Tetris.DIM_X;
+        canvasEl.height = Tetris.DIM_Y;
+
+        var ctx = canvasEl.getContext("2d");
+        var game = new Tetris.Game();
+        new Tetris.GameView(game, ctx).start();
+      })();
+    </script>
+  </body>
+</html>
