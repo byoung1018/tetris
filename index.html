@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Tetris</title>
+    <link rel="stylesheet" type="text/css" href="css/tetris.css" />
+
+  </head>
+
+  <body>
+
+    <div class="tetris-container">
+      <canvas></canvas>
+    </div>
+
+
+
+    <script type="application/javascript" src="vendor/keymaster.js"></script>
+    <script type="application/javascript" src="lib/util.js"></script>
+    <script type="application/javascript" src="lib/piece.js"></script>
+    <script type="application/javascript" src="lib/game.js"></script>
+    <script type="application/javascript" src="lib/gameView.js"></script>
+    <script type="application/javascript">
+      (function () {
+        var canvasEl = document.getElementsByTagName("canvas")[0];
+        canvasEl.width = Tetris.DIM_X;
+        canvasEl.height = Tetris.DIM_Y;
+        var ctx = canvasEl.getContext("2d");
+        var game = new Tetris.Game();
+        new Tetris.GameView(ctx);
+      })();
+    </script>
+  </body>
+</html>
