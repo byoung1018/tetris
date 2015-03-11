@@ -18,3 +18,4 @@ I decided to just use a 2d array to keep track of all of the locations of the bl
   * draw a border around the pieces instead of around the individual blocks
   * keep the frozen blocks as whole pieces instead of individual pieces
   * add cascading to the row removal
+* Multiplayer modes
